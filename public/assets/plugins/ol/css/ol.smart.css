@@ -1,0 +1,132 @@
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+  }
+  .ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+  }
+  .ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+  }
+  .ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+  }
+  .ol-popup-closer:after {
+    content: "✖";
+  }
+
+  .mappopup-content {
+    height: 200px;
+    overflow: scroll;
+  }
+
+  #mapinfo{
+    z-index:10000; 
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color:#FFFFFF;
+    overflow-y: scroll;
+  }
+
+  
+.gis-layers {
+  background-image: url('/images/gis/layers.png');
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  /* Other styles here */
+}
+
+.gis-pen {
+  background-image: url('/images/gis/pen.png');
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  /* Other styles here */
+}
+
+
+.ol-overlay.menu-map
+{	
+  width: 20%;
+  background: #fff;
+  color: #333;
+  box-shadow: 0px 0px 5px #000;
+  padding: 0.5em;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+/* style the close box */
+.ol-overlay.menu-map .ol-closebox
+{	
+  color: #369;
+  right: 3em;
+  top: 0.5em;
+}
+.ol-overlay.menu-map .ol-closebox:before
+{	
+  content:"\f0c9";
+  font-family:FontAwesome;
+}
+
+#menu-map
+{	
+  padding-top: 1.5em;
+  font-size: 0.9em;
+  overflow-y: scroll; 
+  height: 98%;
+}
+/* menu button */
+.ol-control.menu-map
+{	
+  top: 0.5em;
+  right: 3.5em;
+}
+.ol-control.menu-map i
+{	
+  color: #fff;
+}
+
+/**/
+.ol-overlay img
+{	
+  max-width: 90%;
+}
+.menu-map-data,
+.menu-map-data p
+{	
+  margin:0;
+  text-align: center;
+  font-size:0.9em;
+}
