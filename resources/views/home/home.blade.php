@@ -21,6 +21,7 @@
             }
         </style>
         <script src="https://cdn.tailwindcss.com"></script>
+        
     </head>
     @include('header')
 
@@ -132,5 +133,36 @@
                 </div>
             </div>
         </div>
+        <div id="customer-address-list">
+
+        </div>
     </body>
+    <script>
+        var hostUrl = "assets/";
+    </script>
+    <script src="/assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Page Vendors Javascript(used by this page)-->
+    <script src="/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <script src="/assets/plugins/ol6/build/ol.js"></script>
+    <script src="/assets/plugins/ol-ext-master/dist/ol-ext.js"></script>
+    <script src="assets/js/map/baselayers.js"></script>
+    <script src="assets/js/map/map_web.js"></script>
+    <script src="assets/js/map/map_script.js"></script>
+    <script>
+        console.log('ssop')
+        $.ajax({
+            url: '/customer/address/list',
+            type: 'get',
+            success: function(response) {
+                $('#customer-address-list').html(response);
+            },
+            error: function(xhr, textStatus, error) {
+                console.log(xhr.statusText);
+                console.log(textStatus);
+                console.log(error);
+            },
+            async: false
+        });
+    </script>
 </html>
